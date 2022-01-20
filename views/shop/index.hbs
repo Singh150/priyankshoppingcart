@@ -1,0 +1,30 @@
+
+<img width="100%" src="https://previews.123rf.com/images/elenabsl/elenabsl2001/elenabsl200100005/137269692-grocery-shopping-promotional-sale-banner-fast-shopping-cart-full-of-fresh-colorful-food.jpg">
+<h1 align="center">Products</h1>
+{{# each products}}
+
+<div class="row anu1 anu2">
+
+    {{# each this}}
+    <div class="column">
+        <div class="card">
+            <img  height="300px" width="300px" src="{{ this.imagepath }}" >
+            <div class="container">
+                <h2>{{ this.title }}</h2>
+
+                <p class="description">{{ this.description }}</p>
+
+                <p class="title">Rs.{{ this.price }}</p>
+
+                <a href="/add-to-cart/{{ this._id }}"><button style="float: right; margin-top:-50px" class="button btn btn-success">Add to Cart</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    {{/each}}
+    
+
+{{/each}}
+
+
